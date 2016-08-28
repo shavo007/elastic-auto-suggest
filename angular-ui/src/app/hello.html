@@ -1,0 +1,35 @@
+<h1>{{ $ctrl.hello }}</h1>
+
+<br>
+
+
+<h2>Example 1 - Countries of the World</h2>
+<div angucomplete-alt id="ex1"
+  placeholder="Search countries"
+  maxlength="50"
+  pause="100"
+  selected-object="selectedCountry"
+  local-data="$ctrl.countries"
+  search-fields="name"
+  title-field="name"
+  minlength="1"
+  input-class="form-control form-control-small"
+  match-class="highlight"></div>
+
+
+
+<h2>Example 2 - Hotels API</h2>
+  <div angucomplete-alt
+  id="ex5"
+  placeholder="Search hotels"
+  pause="500"
+  selected-object="selectedProject"
+  remote-url="http://localhost:8081/suggest"
+  remote-url-request-formatter="remoteUrlRequestFn"
+  remote-url-data-field="items"
+  title-field="name"
+  description-field="description"
+  minlength="1"
+  input-class="form-control form-control-small"
+  match-class="highlight">
+</div>

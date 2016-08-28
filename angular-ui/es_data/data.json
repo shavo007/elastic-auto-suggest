@@ -1,0 +1,72 @@
+{
+   "took": 2,
+   "timed_out": false,
+   "_shards": {
+      "total": 5,
+      "successful": 5,
+      "failed": 0
+   },
+   "hits": {
+      "total": 3,
+      "max_score": 1,
+      "hits": [
+         {
+            "_index": "hotels",
+            "_type": "hotel",
+            "_id": "2",
+            "_score": 1,
+            "_source": {
+               "name": "Hotel Monaco",
+               "city": "Munich",
+               "name_suggest": {
+                  "input": [
+                     "Monaco Munich",
+                     "Hotel Monaco"
+                  ],
+                  "output": "Hotel Monaco",
+                  "weight": 10
+               }
+            }
+         },
+         {
+            "_index": "hotels",
+            "_type": "hotel",
+            "_id": "1",
+            "_score": 1,
+            "_source": {
+               "name": "Mercure Hotel Munich",
+               "city": "Munich",
+               "name_suggest": {
+                  "input": [
+                     "Mercure Hotel Munich",
+                     "Mercure Munich"
+                  ],
+                  "output": "Hotel Mercure",
+                  "weight": 5
+               }
+            }
+         },
+         {
+            "_index": "hotels",
+            "_type": "hotel",
+            "_id": "3",
+            "_score": 1,
+            "_source": {
+               "name": "Courtyard by Marriot Munich City",
+               "city": "Munich",
+               "name_suggest": {
+                  "input": [
+                     "Courtyard by Marriot Munich City",
+                     "Marriot Munich City"
+                  ],
+                  "output": "Hotel Marriot",
+                  "weight": 15,
+                  "payload": {
+                     "hotel_id": 3
+                  }
+               }
+            }
+         }
+      ]
+   }
+}

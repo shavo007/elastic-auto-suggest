@@ -1,0 +1,24 @@
+{
+   "hotels": {
+      "mappings": {
+         "hotel": {
+            "properties": {
+               "city": {
+                  "type": "string"
+               },
+               "name": {
+                  "type": "string"
+               },
+               "name_suggest": {
+                  "type": "completion",
+                  "analyzer": "suggest_synonyms",
+                  "payloads": true,
+                  "preserve_separators": true,
+                  "preserve_position_increments": true,
+                  "max_input_length": 50
+               }
+            }
+         }
+      }
+   }
+}
