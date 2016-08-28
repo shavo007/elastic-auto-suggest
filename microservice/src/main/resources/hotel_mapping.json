@@ -1,0 +1,45 @@
+{
+  "hotels": {
+    "mappings": {
+      "hotel": {
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "hotels": {
+            "properties": {
+              "completion": {
+                "properties": {
+                  "field": {
+                    "type": "string"
+                  },
+                  "fuzzy": {
+                    "properties": {
+                      "edit_distance": {
+                        "type": "long"
+                      }
+                    }
+                  }
+                }
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "name_suggest": {
+            "type": "completion",
+            "analyzer": "suggest_synonyms",
+            "payloads": false,
+            "preserve_separators": true,
+            "preserve_position_increments": true,
+            "max_input_length": 50
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+PUT /hotels/hotel/3
+{
+"name" :         "Courtyard by Marriot Munich City",
+"city" :         "Munich",
+"name_suggest" : {
+"input" :      [
+"Courtyard by Marriot Munich City",
+"Marriot Munich City"
+],
+"output":      "Hotel Marriot"
+}
+}
+
+
+PUT /hotels/hotel/2
+{
+"name" :         "Hotel Monaco",
+"city" :         "Munich",
+"name_suggest" : {
+"input" :      [
+"Monaco Munich",
+"Hotel Monaco"
+],
+"output":      "Hotel Monaco"
+}
+}
+
+
+PUT /hotels/hotel/1
+{
+"name" :         "Mercure Hotel Munich",
+"city" :         "Munich",
+"name_suggest" : {
+"input" :      [
+"Mercure Hotel Munich",
+"Mercure Munich"
+],
+"output":      "Hotel Mercure"
+}
+}

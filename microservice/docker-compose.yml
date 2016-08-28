@@ -1,0 +1,24 @@
+version: '2'
+services:
+  master:
+    image: elasticsearch:latest
+    command: elasticsearch  --node.master=true --node.data=false --cluster.name=cluster-01 --node.name="Master of Disaster"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    restart: always
+  node:
+    image: elasticsearch:latest
+    command: elasticsearch  --cluster.name=cluster-01 --discovery.zen.ping.unicast.hosts=master
+    restart: always
+    depends_on:
+      - master
+  kibana:
+    image: kibana:latest
+    ports:
+      - "5601:5601"
+    environment:
+      -  SHANE_PROP=hello
+      -  ELASTICSEARCH_URL=http://master:9200
+    depends_on:
+         - master

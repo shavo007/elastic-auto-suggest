@@ -35,6 +35,7 @@ dependencies {
 	compile('org.projectlombok:lombok')
 	compile('org.springframework.retry:spring-retry')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile group: 'io.searchbox', name: 'jest', version: '2.0.2'
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
